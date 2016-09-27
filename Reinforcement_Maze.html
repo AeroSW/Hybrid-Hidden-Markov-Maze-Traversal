@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module Reinforcement_Maze</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>Reinforcement_Maze</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:f%3A%5Cprogram3%5Cpython%5Creinforcement_maze.py">f:\program3\python\reinforcement_maze.py</a></font></td></tr></table>
+    <p></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="math.html">math</a><br>
+</td><td width="25%" valign=top><a href="random.html">random</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="builtins.html#object">builtins.object</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="Reinforcement_Maze.html#Reinforcement_Maze">Reinforcement_Maze</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Reinforcement_Maze">class <strong>Reinforcement_Maze</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="Reinforcement_Maze-__init__"><strong>__init__</strong></a>(self, gamma, state_controller)</dt><dd><tt>Preconditions:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;gamma&nbsp;-&nbsp;float<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This&nbsp;is&nbsp;the&nbsp;"cost"&nbsp;for&nbsp;not&nbsp;being&nbsp;in&nbsp;a&nbsp;terminal&nbsp;state.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;state_controller&nbsp;-&nbsp;State_Controller<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This&nbsp;<a href="builtins.html#object">object</a>&nbsp;allows&nbsp;methods&nbsp;in&nbsp;this&nbsp;class&nbsp;to&nbsp;have&nbsp;states&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;actions.<br>
+Postconditions:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;This&nbsp;method&nbsp;initializes&nbsp;a&nbsp;<a href="#Reinforcement_Maze">Reinforcement_Maze</a>&nbsp;<a href="builtins.html#object">object</a>&nbsp;for&nbsp;use.</tt></dd></dl>
+
+<dl><dt><a name="Reinforcement_Maze-countedAverages"><strong>countedAverages</strong></a>(self, num_trials)</dt><dd><tt>Preconditions:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;num_trials&nbsp;-&nbsp;integer<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Number&nbsp;of&nbsp;times&nbsp;the&nbsp;user&nbsp;wants&nbsp;to&nbsp;randomly&nbsp;generate&nbsp;an&nbsp;action&nbsp;for<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;each&nbsp;state.<br>
+Postconditions:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Returns&nbsp;a&nbsp;dictionary&nbsp;containing&nbsp;each&nbsp;state's&nbsp;key&nbsp;in&nbsp;the&nbsp;state_list&nbsp;instance<br>
+&nbsp;&nbsp;&nbsp;&nbsp;as&nbsp;a&nbsp;key&nbsp;for&nbsp;a&nbsp;reference&nbsp;to&nbsp;another&nbsp;dictionary&nbsp;with&nbsp;action&nbsp;keys&nbsp;as&nbsp;its&nbsp;keys<br>
+&nbsp;&nbsp;&nbsp;&nbsp;with&nbsp;references&nbsp;to&nbsp;another&nbsp;dictionary&nbsp;with&nbsp;all&nbsp;possible&nbsp;states'&nbsp;keys&nbsp;for<br>
+&nbsp;&nbsp;&nbsp;&nbsp;states&nbsp;reachable&nbsp;by&nbsp;that&nbsp;action&nbsp;with&nbsp;a&nbsp;decimal&nbsp;representing&nbsp;the&nbsp;probability<br>
+&nbsp;&nbsp;&nbsp;&nbsp;that&nbsp;state&nbsp;would&nbsp;be&nbsp;reached&nbsp;by&nbsp;the&nbsp;action&nbsp;performed&nbsp;based&nbsp;on&nbsp;the&nbsp;number&nbsp;of<br>
+&nbsp;&nbsp;&nbsp;&nbsp;times&nbsp;the&nbsp;action&nbsp;was&nbsp;performed&nbsp;in&nbsp;this&nbsp;method&nbsp;for&nbsp;the&nbsp;state&nbsp;performing&nbsp;the<br>
+&nbsp;&nbsp;&nbsp;&nbsp;action.</tt></dd></dl>
+
+<dl><dt><a name="Reinforcement_Maze-createUtilities"><strong>createUtilities</strong></a>(self, tol, averages)</dt><dd><tt>Preconditions:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;tol&nbsp;-&nbsp;float<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tol,&nbsp;short&nbsp;for&nbsp;tolerance,&nbsp;is&nbsp;the&nbsp;minimal&nbsp;amount&nbsp;that&nbsp;a&nbsp;previous<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;utility&nbsp;and&nbsp;a&nbsp;newly&nbsp;generated&nbsp;utility&nbsp;can&nbsp;differ&nbsp;by.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;averages&nbsp;-&nbsp;dictionary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;These&nbsp;are&nbsp;computed&nbsp;probabilities&nbsp;that&nbsp;each&nbsp;action&nbsp;has&nbsp;a&nbsp;chance&nbsp;of<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;succeeding&nbsp;with.&nbsp;&nbsp;Generally&nbsp;created&nbsp;by&nbsp;'Counting&nbsp;the&nbsp;number&nbsp;of&nbsp;times<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a&nbsp;state&nbsp;is&nbsp;reached&nbsp;from&nbsp;another&nbsp;state&nbsp;by&nbsp;an&nbsp;action,&nbsp;divided&nbsp;by&nbsp;the<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;number&nbsp;of&nbsp;times&nbsp;that&nbsp;action&nbsp;from&nbsp;the&nbsp;initial&nbsp;state&nbsp;was&nbsp;performed.'<br>
+Postconditiosn:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Returns&nbsp;a&nbsp;copy&nbsp;of&nbsp;this&nbsp;class's&nbsp;utility&nbsp;list&nbsp;after&nbsp;running&nbsp;it<br>
+&nbsp;&nbsp;&nbsp;&nbsp;through&nbsp;value&nbsp;iteration&nbsp;some&nbsp;random&nbsp;number&nbsp;of&nbsp;times.</tt></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table></td></tr></table>
+</body></html>
